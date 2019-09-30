@@ -23,7 +23,7 @@ public:
             //i=j-s when accessing S to flip table and to make iterative solution have sequential access
             for(int s=0; s<SIZE; s++){
                 for(int j=s; j<SIZE; j++){
-                    if(j==j-s){massTable[s][j] = S[j]; std::cout << "check: s=" << s << " j=" << j << " @" << massTable[s][j] << std::endl;}
+                    if(j==j-s){massTable[s][j] = S[j];}
                     else{
                         massTable[s][j] = max3(massTable[s-1][j-1], massTable[s-1][j], checkK(s, j, SIZE));
                     }
